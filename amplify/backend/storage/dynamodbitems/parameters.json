@@ -1,0 +1,5 @@
+{
+    "tableName": "amplifyworkshopitems",
+    "partitionKeyName": "id",
+    "partitionKeyType": "N"
+}
