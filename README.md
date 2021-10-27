@@ -1,31 +1,33 @@
-# Getting Started with Create React App
+# Full Serverless App with React and Amplify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+본 레포지터리의 내용은 [AWS Amplify Workshop](https://master.d3f5073vvso9t3.amplifyapp.com) 실습 결과물 입니다.  
+AWS Cloud9 환경에서 작업했기 때문에, Local 환경에서는 동작하지 않을 수 있습니다.
 
-## Available Scripts
+![aws-amplify-serverless-architecture](./aws-amplify-serverless-architecture.png)
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+```bash
+.
+├── amplify
+│   └── backend
+│       ├── analytics
+│       │   └── amplifyworkshop      : Pinpoint - 사용자 이벤트 수집 (커스텀 속성 추가)
+│       ├── api
+│       │   └── amplifyworkshopapi   : API Gateway - 프론트엔드에 REST API 호스팅
+│       ├── auth
+│       │   └── EcommerceAuth         : Cognito - 사용자 등록과 인증 처리
+│       ├── function
+│       │   └── AmplifyWorkshopLambda : Lambda - 상품 정보 조회
+│       │       └── src              
+│       └── storage
+│           └── dynamodbitems         : DynamoDB - 상품 정보 저장
+├── public
+│   └── images
+│       ├── misc
+│       ├── products
+│       └── slider
+└── src
+    ├── components
+    ├── config
+    ├── context
+    └── pages
+```
